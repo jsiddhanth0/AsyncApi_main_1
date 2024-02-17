@@ -34,7 +34,7 @@ public class controller1 {
 
 
 	@GetMapping("/hello")
-	public CompletableFuture<String> Hello(@RequestBody String query){
+	public CompletableFuture<String> Helloooo(@RequestBody String query){
 		return serv1.Hello(query);
 	}
 //	public CompletableFuture<String> Hello(@RequestBody String query) throws InterruptedException
