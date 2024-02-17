@@ -31,8 +31,11 @@ public class controller1 {
 //		return "hello world" ;
 //		});
 //	}
-
-
+	@GetMapping("/")
+	public CompletableFuture<String> H(){
+		return CompletableFuture.completedFuture("hiiiii");
+	}
+//	"?"
 	@GetMapping("/hello")
 	public CompletableFuture<String> Helloooo(@RequestBody String query){
 		return serv1.Hello(query);
