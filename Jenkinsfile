@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { dockerfile true }
 
     environment {
         DOCKER_REGISTRY = "hub.docker.com" // Replace with your registry
