@@ -25,7 +25,7 @@ pipeline {
         stage('Build image') {
             steps {
                 script {
-                                        docker.build(
+                     docker.build(
                       image: "${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:${BUILD_NUMBER}",
                       context: '.',
                       args: ['--build-arg', "JAR_FILE=target/${APP_NAME}.jar"]
