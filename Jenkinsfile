@@ -6,7 +6,7 @@ pipeline {
         DOCKER_IMAGE_NAME = "Async_api_sid"
         APP_NAME = "demo12" // Replace with your application name
         GIT_URL = "https://github.com/jsiddhanth0/AsyncApi_main.git"
-        GIT_CREDENTIALS_ID = "jsidgitcred"
+        GIT_CREDENTIALS_ID = "jenkins_id"
     }
 
     stages {
