@@ -28,11 +28,15 @@ pipeline {
                     // dockerImage name: "${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:${BUILD_NUMBER}",
                     //   dockerFile: 'DockerFile',
                     //   buildArgs: ['JAR_FILE=target/${APP_NAME}.jar']
-                     docker.build(
-                      image: "${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:${BUILD_NUMBER}",
-                      context: '.',
-                      args: ['--build-arg', "JAR_FILE=target/${APP_NAME}.jar"]
-                    )
+                    //  docker.build(
+                    //   image: "${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:${BUILD_NUMBER}",
+                    //   context: '.',
+                    //   args: ['--build-arg', "JAR_FILE=target/${APP_NAME}.jar"]
+                    // )
+                                    docker.build("${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:${BUILD_NUMBER}", ".",
+                    args: ['--build-arg', "JAR_FILE=target/${APP_NAME}.jar"]
+                )
+
                 }
             }
         }
