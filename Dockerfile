@@ -12,6 +12,6 @@ FROM openjdk:17-slim
 WORKDIR /app
 
 
-EXPOSE 8080
+EXPOSE 5000
 
 CMD ["java", "-jar", "asyncapi.jar"]
