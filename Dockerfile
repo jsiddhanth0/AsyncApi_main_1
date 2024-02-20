@@ -7,9 +7,9 @@ RUN mvn clean package
 
 COPY target/*.jar ./
 
-FROM openjdk:17-slim
+#FROM openjdk:17-slim
 
-WORKDIR /app
+#WORKDIR /app
 
 
 EXPOSE 5000
